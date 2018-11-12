@@ -1,0 +1,54 @@
+Path 4.7.03: Matlab Link
+4 row/cols, 8 non-zeros, 50.00% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 4.7.03 (Mon Feb 27 19:48:03 2012)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  2.3458e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  1.4755e-01 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  1.0000e+00 eqn: (f[    1])
+                                            var: (x[    1])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  1.0224e+00 eqn: (f[    2])
+Minimum Row Norm. . . . . . . .  7.3435e-01 eqn: (f[    4])
+Maximum Column Norm . . . . . .  2.2929e+00 var: (x[    1])
+Minimum Column Norm . . . . . .  1.0030e-02 var: (x[    3])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             8.8911e-07             0.0e+00 (f[    4])
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     1     1 8.8911e-07           I 0.0e+00 8.9e-07 (f[    4])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  2.8704e-07 eqn: (f[    4])
+Inf-Norm of Normal Map. . . . .  8.8903e-07 eqn: (f[    4])
+Inf-Norm of Minimum Map . . . .  8.8903e-07 eqn: (f[    4])
+Inf-Norm of Fischer Function. .  8.8903e-07 eqn: (f[    4])
+Inf-Norm of Grad Fischer Fcn. .  3.8023e-07 eqn: (f[    2])
+Two-Norm of Grad Fischer Fcn. .  4.5801e-07
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  2.3458e+00 var: (x[    2])
+Maximum of F. . . . . . . . . .  1.4755e-01 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  1.0000e+00 eqn: (f[    1])
+                                            var: (x[    1])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 0
+Minor Iterations. . . . 0
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 0
+Gradient Steps. . . . . 0
+Function Evaluations. . 1
+Gradient Evaluations. . 1
+Basis Time. . . . . . . 0.000008
+Total Time. . . . . . . 0.005200
+Residual. . . . . . . . 8.891136e-07
