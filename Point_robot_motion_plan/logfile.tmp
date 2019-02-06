@@ -1,0 +1,56 @@
+Path 4.7.03: Matlab Link
+3 row/cols, 6 non-zeros, 66.67% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 4.7.03 (Mon Feb 27 19:48:03 2012)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  5.3788e+00 var: (x[    1])
+Maximum of F. . . . . . . . . .  5.8015e-01 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  1.0000e+00 eqn: (f[    1])
+                                            var: (x[    1])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  1.3598e+00 eqn: (f[    3])
+Minimum Row Norm. . . . . . . .  1.0097e+00 eqn: (f[    2])
+Maximum Column Norm . . . . . .  1.8742e+00 var: (x[    1])
+Minimum Column Norm . . . . . .  2.7196e-02 var: (x[    3])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             4.0000e-02             0.0e+00 (f[    1])
+    1     1     0     2 4.3027e-16  1.0e+00    0.0e+00 (f[    1])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 4.3027e-16           I 0.0e+00 4.3e-16 (f[    1])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  4.3021e-16 eqn: (f[    1])
+Inf-Norm of Normal Map. . . . .  4.3021e-16 eqn: (f[    1])
+Inf-Norm of Minimum Map . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Fischer Function. .  4.3021e-16 eqn: (f[    1])
+Inf-Norm of Grad Fischer Fcn. .  4.3021e-16 eqn: (f[    1])
+Two-Norm of Grad Fischer Fcn. .  4.3033e-16
+
+FINAL POINT STATISTICS
+Maximum of X. . . . . . . . . .  5.4153e+00 var: (x[    1])
+Maximum of F. . . . . . . . . .  6.0419e-01 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  1.0000e+00 eqn: (f[    1])
+                                            var: (x[    1])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 0
+Minor Iterations. . . . 0
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 2
+Gradient Evaluations. . 2
+Basis Time. . . . . . . 0.000023
+Total Time. . . . . . . 0.003209
+Residual. . . . . . . . 4.302674e-16

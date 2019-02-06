@@ -28,7 +28,7 @@ center_c2 = [-0.6; 1.0]; radius2 = 0.4;
 center_c3 = [1.1; 0.1];  radius3 = 0.4;
 
 % Tree building parameters
-max_iter = 20;                % Maximum number of iterations
+max_iter = 25;                % Maximum number of iterations
 dt = 1;                       % total input time
 dh = 0.01;                    % input velocity interval
 vel_mag = 1;
@@ -86,8 +86,7 @@ while (num_iter <= max_iter) && (reached_flag == 0)
               tree.node_count = tree.node_count + 1;
               tree.unexp_ind = [tree.unexp_ind, tree.node_count];
               tree.edges = [tree.edges; temp_ind, tree.node_count, new_dist_2_goal];
-        end
-        
+        end     
         % Change flag if reached with given tol
         if new_dist_2_goal < tol
             reached_flag = 1;
@@ -99,7 +98,7 @@ while (num_iter <= max_iter) && (reached_flag == 0)
     
     % Find the index of node to be expanded from the list
     [min_dist, min_ind] = min(tree.nodes(tree.unexp_ind, end));
-    temp_ind = tree.unexp_ind(min_ind);                     % index of min-cost node in overall node list
+    temp_ind = tree.unexp_ind(min_ind);                % index of min-cost node in overall node list
     fprintf('Minimum distance: %2.6f\n', min_dist);
     fprintf('Number of iterations: %d\n', num_iter);
     
@@ -136,3 +135,4 @@ path_node_ind = fliplr(path_node_ind);
 
 % Visualize the RR arm motion
 visualizeRR();
+% visualizeRR_paper();
