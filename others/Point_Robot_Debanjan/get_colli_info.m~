@@ -1,0 +1,31 @@
+function [contact_normal,dist_c]= get_colli_info(q)
+    global maze_height;    global maze_length;
+    global maze_thick;     global gap;
+    
+    xsegs = gap:gap:maze_length;
+    yval_pair1 = [maze_thick, maze_height];
+    yval_pair2 = [maze_height - maze_thick, 0];
+    
+    line_segs = zeros(2, 2, length(xsegs)-1);
+    for i = 1:length(xsegs)-1
+        if mod(i, 2) ~= 0
+            ysegs = yval_pair1;
+        else
+            ysegs = yval_pair2;
+        end
+        line_segs(:, :, i) = [xsegs(i+1), xsegs(i); ysegs];
+    end
+    
+    for i = 1:length(xsegs)-1
+        if q(1,1) >= line_segs(1,2,i) && q(1,1) < line_segs(1,1,i)
+            [dist_c, q_c] = dist_pt_lineseg(q, line_segs(:, :,i));
+            contact_normal = line_segs(:,2, i) - line_segs(:, 1, i);
+            if mod(i, 2) == 0
+                contact_normal = -contact_normal;
+            end
+            
+            break;
+        end
+    end
+    
+end

@@ -1,0 +1,64 @@
+Path 4.7.03: Matlab Link
+3 row/cols, 2 non-zeros, 22.22% dense.
+
+Could not open options file: path.opt
+Using defaults.
+Path 4.7.03 (Mon Feb 27 19:48:03 2012)
+Written by Todd Munson, Steven Dirkse, and Michael Ferris
+
+INITIAL POINT STATISTICS
+Zero column of order. . . . . .  0.0000e+00 var: (x[    3])
+Zero row of order . . . . . . .  0.0000e+00 eqn: (f[    3])
+Total zero columns. . . . . . .  1
+Total zero rows . . . . . . . .  1
+Maximum of X. . . . . . . . . .  4.9980e+00 var: (x[    1])
+Maximum of F. . . . . . . . . .  3.6500e+00 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  1.0000e+00 eqn: (f[    1])
+                                            var: (x[    1])
+
+INITIAL JACOBIAN NORM STATISTICS
+Maximum Row Norm. . . . . . . .  1.0000e+00 eqn: (f[    1])
+Minimum Row Norm. . . . . . . .  1.0000e+00 eqn: (f[    1])
+Maximum Column Norm . . . . . .  1.0000e+00 var: (x[    1])
+Minimum Column Norm . . . . . .  1.0000e+00 var: (x[    1])
+
+Crash Log
+major  func  diff  size  residual    step       prox   (label)
+    0     0             1.3000e-02             0.0e+00 (f[    1])
+    1     1     0     2 1.0061e-16  1.0e+00    0.0e+00 (f[    1])
+pn_search terminated: no basis change.
+
+Major Iteration Log
+major minor  func  grad  residual    step  type prox    inorm  (label)
+    0     0     2     2 1.0061e-16           I 0.0e+00 1.0e-16 (f[    1])
+
+FINAL STATISTICS
+Inf-Norm of Complementarity . .  1.0061e-16 eqn: (f[    1])
+Inf-Norm of Normal Map. . . . .  1.0061e-16 eqn: (f[    1])
+Inf-Norm of Minimum Map . . . .  0.0000e+00 eqn: (f[    1])
+Inf-Norm of Fischer Function. .  1.0061e-16 eqn: (f[    1])
+Inf-Norm of Grad Fischer Fcn. .  1.0061e-16 eqn: (f[    1])
+Two-Norm of Grad Fischer Fcn. .  1.0061e-16
+
+FINAL POINT STATISTICS
+Zero column of order. . . . . .  0.0000e+00 var: (x[    3])
+Zero row of order . . . . . . .  0.0000e+00 eqn: (f[    3])
+Total zero columns. . . . . . .  1
+Total zero rows . . . . . . . .  1
+Maximum of X. . . . . . . . . .  5.0110e+00 var: (x[    1])
+Maximum of F. . . . . . . . . .  3.6500e+00 eqn: (f[    3])
+Maximum of Grad F . . . . . . .  1.0000e+00 eqn: (f[    1])
+                                            var: (x[    1])
+
+ ** EXIT - solution found.
+
+Major Iterations. . . . 0
+Minor Iterations. . . . 0
+Restarts. . . . . . . . 0
+Crash Iterations. . . . 1
+Gradient Steps. . . . . 0
+Function Evaluations. . 2
+Gradient Evaluations. . 2
+Basis Time. . . . . . . 0.000017
+Total Time. . . . . . . 0.001332
+Residual. . . . . . . . 1.006140e-16
