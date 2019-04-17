@@ -12,10 +12,10 @@ global q_o;            global mid_pt;          global dof;   global qg; global q
 global maze_height; global maze_length; global maze_thick; global gap;
 
 % Add PATH solver to matlab's search path
-addpath('../pathmexa64'); addpath('../Point_robot_supporting_files');
+addpath('../../pathmexa64'); addpath('../Point_robot_supporting_files');
 
 % Define parameters
-num_of_contact = 1; safe_dist = 0.02; dof = 2; h = 0.02; kp = 2; tf = 10;
+num_of_contact = 1; safe_dist = 0.02; dof = 2; h = 0.18; kp = 2; tf = 10;
 
 % Define start and goal configuration
 qs = [0.5; 0.9]; qg = [5.5; 0.5];
@@ -27,6 +27,7 @@ maze_height = 1; maze_length = 5; maze_thick = 0.1; gap = 0.5;
 % Draw the maze
 drawmaze(); axis('equal');
 
+tic;
 % ///////////////////////////////////
 %        Start of PATH solver      //
 %////////////////////////////////////
@@ -43,9 +44,10 @@ while t < tf
     
     dist_qg = (qg - q_o);                          % current error 
     % Termination criterion
-    fprintf('dist_goal: %2.4f\n', norm(dist_qg));
+%     fprintf('dist_goal: %2.4f\n', norm(dist_qg));
     if dist_qg <= 1e-1
-        fprintf("Time taken: %2.4f\n", t);
+        toc;
+%         fprintf("Time taken: %2.4f\n", t);
 %         total_tm = t;
 %         t = tf;
 %         continue;
@@ -72,8 +74,9 @@ while t < tf
     visualize_points(q_o, mid_pt, contact_normal);
     
 end
+toc;
 
-% drawmaze();
+drawmaze();
 h3 = plot(qo_array(1, :), qo_array(2, :), 'r--');
 m1 = plot(qs(1), qs(2), 'o', 'MarkerFaceColor', 'r');
 m2 = plot(qg(1), qg(2), 'o', 'MarkerFaceColor', 'g');

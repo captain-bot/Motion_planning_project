@@ -1,5 +1,5 @@
 clc; clear; close all;
-addpath('../pathmexa64');
+addpath('../../pathmexa64');
 
 % Make simulation parameters global
 global contact_normal; global closeset_dist;  global safe_dist;
